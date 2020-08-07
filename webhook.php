@@ -33,7 +33,7 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => [
                             [
                                 'type' => 'text',
-                                'text' => $message['text']
+                                'text' => $message['textだ゛ニ゛ャ゛ア゛ン゛！゛？゛']
                             ]
                         ]
                     ]);
