@@ -28,12 +28,16 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
+                    $d_message = null;
+                    foreach(str_split($message['text']) as $value){
+                        $d_message = $value.'゛';
+                    }
                     $client->replyMessage([
                         'replyToken' => $event['replyToken'],
                         'messages' => [
                             [
                                 'type' => 'text',
-                                'text' => $message['text'].'っ゛て゛何゛だ゛ニ゛ャ゛ア゛ン゛！゛？゛'
+                                'text' => $d_message.'っ゛て゛何゛だ゛ニ゛ャ゛ア゛ン゛！！？'
                             ]
                         ]
                     ]);
